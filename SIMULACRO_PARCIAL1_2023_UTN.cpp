@@ -7,16 +7,18 @@ int mayor(int,int);
 void calculaPromedioPrimos(int,int);
 
 int main(int argc, char *argv[]) {
-	int n;
+	int n,m;
 	cin >> n;
-	while(rango(n)==0){
+	
+	do{
 		cin >> n;
-	}
-	int m;
-	cin >> m;
-	while(mayor(m,n)== 0){
+	}while(rango(n)==0);
+	
+	do {
 		cin >> m;
-	}
+	} while(mayor(m,n)== 0);
+	
+
 	calculaPromedioPrimos(n,m);
 	
 	return 0;
@@ -37,23 +39,23 @@ int mayor(int a, int b){
 	}
 }
 void calculaPromedioPrimos(int a,int b){
-	int prod;
-	int n;
-	float Promedio;
-	for(int i >= a; i <= b; i++){
-		int sum = 0;
+	int suma =0;
+	int n=0;
+	float Promedio=0;
+	
+	for(int i = a; i <= b; i++){
+		int conteo = 0;
 		for(int j = 1; j<=i; j++){
 			if(i%j == 0){
-				sum += j;
+				conteo++;
 			}
 		}
-		if(sum = i+1){
-			cout << i << endl;
-			prod += i;
+		if(conteo == 2){
+			suma = suma+i;
 			n ++;
 		}
 	}
-	Promedio = prod/n;
+	Promedio = suma/(float)n;
 	cout << fixed << setprecision(2) << endl;
 	cout << Promedio << endl;
 	int mod = Promedio;
