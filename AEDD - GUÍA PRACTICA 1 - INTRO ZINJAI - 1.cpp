@@ -1,16 +1,19 @@
 #include <iostream>
 #include <string>
+//Utilizando el Zinjai copia el siguiente programa en el editor. Luego, compÃ­lalo y ejecÃºtalo.
+//Observando el comportamiento resultante analizar: Â¿QuÃ© realiza el programa? Â¿CÃ³mo se estructura un programa en C++?
 using namespace std;
 int main() {
 	string nombre;
 	int edad;
-	cout << "¿Cómo te llamas? ";
+	cout << "Â¿CÃ³mo te llamas? ";
 	cin >> nombre;
-	cout << "¿Cuántos años tienes? ";
+	cout << "Â¿CuÃ¡ntos aÃ±os tienes? ";
 	cin >> edad;
-	cout << "¡Hola, " << nombre << "! Tienes " << edad << " años." <<
+	cout << "Â¡Hola, " << nombre << "! Tienes " << edad << " aÃ±os." <<
 		endl;
 	return 0;
-}
+}
+
 
 
