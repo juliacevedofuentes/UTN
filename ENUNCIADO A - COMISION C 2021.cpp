@@ -1,42 +1,34 @@
 #include <iostream>
 #include <iomanip>
 using namespace std;
-
-int funcionA(int x,int y){
-	int valor = 0;
-	if(x>y){switch(x,y);}
-	for(int i=x;i<=y;i++){
-		if(i%2==0 && i%3== 0){
-			valor += i;
+void funcionA(int x, int y){
+	int sumatoria=0,sumatoria_promedio=0,contador=0;
+	float promedio=0;
+	
+	for(int i=x; i<=y; i++){
+		if(i%2==0 and i%3==0){
+			sumatoria+=i;
 		}
-	}
-	return valor;
-}
-	
-	
-		
-int main(int argc, char *argv[]) {
-	
-	int x,y;
-	cin >> x;
-	do{
-		cin >> y;
-	}while ( y < x*3);
-	
-	float valor = 0.00;
-	int cant = 0;
-	float promedio;
-	if(x>y){switch(x,y);}
-	for(int i=x;i<=y;i++){
 		if(i%5==0){
-			valor += i;
-			cant++;
+			contador++;
+			sumatoria_promedio+=i;
 		}
 	}
-	if(valor != 0){promedio = valor/(float)cant;}else{promedio = valor;}
-	
-	cout << funcionA(x,y) << endl;
+	if(contador!=0){
+		promedio=(float)sumatoria_promedio/contador;
+	}
+	cout << sumatoria << endl;
 	cout << fixed << setprecision(2) << promedio << endl;
+}
+
+int main() {
+	int X, Y;
+	cin>>X;
+	do{
+		cin>>Y;
+	} while(Y<X*3);
+	
+	funcionA(X,Y);
 	
 	return 0;
 }
