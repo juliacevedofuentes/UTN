@@ -27,10 +27,10 @@ double calcularPeaje(int tipoVehiculo, int veces, double costoTotal = 0) {
 	cout << "Vehiculo atravesando el tunel por " << veces << "ra vez. Costo total: $" << fixed << costoTotal << endl;
 	
 	if (veces > 1) {
-		double descuento = costoBase * 0.1; 
+		double descuento = costoTotal * 0.1; 
 		cout << fixed << setprecision(2) << endl;
 		cout << "Descuento aplicado: $" << descuento << endl;
-		return calcularPeaje(tipoVehiculo, veces - 1, costoTotal - descuento*((veces-1)));
+		return calcularPeaje(tipoVehiculo, veces - 1, costoTotal - descuento);
 	}
 	return costoTotal;
- }
+} 
