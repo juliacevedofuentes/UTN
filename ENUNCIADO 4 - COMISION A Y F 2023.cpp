@@ -1,48 +1,41 @@
 #include <iostream>
 using namespace std;
 
-int voc(char);
-void recuento(char,char,char,char);
+bool esVocal(char);
+bool sonConsecutivas(char, char, char, char);
+int cantidadVocales(char, char, char, char);
+
 
 int main(int argc, char *argv[]) {
-	char x,y,w,z;
-	cin >> x >> y >> w >> z;
-	int vocal = 0;
-	int consonante = 0;
-	
-	if( voc(x) == 1){vocal++;}else{consonante++;}
-	if( voc(y) == 1){vocal++;}else{consonante++;}
-	if( voc(z) == 1){vocal++;}else{consonante++;}
-	if( voc(w) == 1){vocal++;}else{consonante++;}
-	
-	
-	if( x== 'a' && y == 'e' && w == 'i' && z == 'o'){
-		cout << "CUATRO VOCALES ORDENADAS" << endl;
-	} else if( y == x+1 && w == y+1 && z == w+1){
-		cout << "Las cuatro letras son consecutivas" << endl;
-		recuento(x,y,w,z);
-	} else if( vocal >= 3){
-		cout << "Hay al menos 3 letras que son vocales" << endl;
-		recuento(x,y,w,z);
-	} else {
-		recuento(x,y,w,z);
-	}
-	
-	return 0;
+    char x, y, z, w;
+    
+    cin >> x >> y >> z >> w;
+    
+    
+    if (x == 'a' and y == 'e' and z == 'i' and w == 'o') cout << "CUATRO VOCALES ORDENADAS" << endl;
+    else {
+        if (sonConsecutivas(x, y, z, w)) cout << "Las cuatro letras son consecutivas" << endl;
+        
+        int vocales = cantidadVocales(x, y, z, w);
+        if (vocales >= 3) cout << "Hay al menos 3 letras que son vocales" << endl;
+        cout << "Hay " << vocales << " vocales y " << 4 - vocales << " consonantes" << endl;
+    }
+    return 0;
 }
-int voc(char a){
-	if(a == 'a' or a == 'e' or a == 'i' or a == 'o' or a == 'u'){
-		return 1;
-	}
-	return 0;
+
+bool esVocal(char letra) {
+    return letra == 'a' or letra == 'e' or letra == 'i' or letra == 'o' or letra == 'u';
 }
-void recuento(char a,char b, char c, char d){
-	int vocal = 0;
-	int consonante = 0;
-	if( voc(a) == 1){vocal++;}else{consonante++;}
-	if( voc(b) == 1){vocal++;}else{consonante++;}
-	if( voc(c) == 1){vocal++;}else{consonante++;}
-	if( voc(d) == 1){vocal++;}else{consonante++;}
-	cout << "Hay " << vocal << " vocales y " << consonante << " consonantes" << endl;
-	
+
+bool sonConsecutivas(char letra1, char letra2, char letra3, char letra4) {
+    return letra1 == letra2 - 1 and letra2 == letra3 - 1 and letra3 == letra4 - 1;
+}
+
+int cantidadVocales(char letra1, char letra2, char letra3, char letra4) {
+    int cantidadVocales = 0;
+    if (esVocal(letra1)) cantidadVocales++;
+    if (esVocal(letra2)) cantidadVocales++;
+    if (esVocal(letra3)) cantidadVocales++;
+    if (esVocal(letra4)) cantidadVocales++;
+    return cantidadVocales;
 }
