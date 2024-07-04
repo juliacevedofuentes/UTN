@@ -7,7 +7,7 @@ using namespace std;
 	int nro3cod;
 	int cambio;
 	
-	cout << "Ingrese el c骴igo de desactivaci髇 de la bomba:" << endl;
+	cout << "Ingrese el c贸digo de desactivaci贸n de la bomba:" << endl;
 	cin >> nro1cod >> nro2cod >> nro3cod ;
 	
 	cambio = nro1cod % 10 + nro1cod;
@@ -15,7 +15,7 @@ using namespace std;
 	nro2cod = nro2cod % 10 + nro2cod;
 	nro3cod = cambio;
 	
-	cout << "El c骴igo de desactivaci髇 real es " << nro1cod << "-" << nro2cod << "-" << nro3cod << endl;
+	cout << "El c贸digo de desactivaci贸n real es " << nro1cod << "-" << nro2cod << "-" << nro3cod << endl;
 		
 	return 0;
 	
