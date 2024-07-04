@@ -33,9 +33,9 @@ char num(char a){
 	
 void patente(char a, char b, char c, char d, char e, char f, char g){
 	if(mayus(a)!= 0 && mayus(b)!= 0 && num(c)!= 0 && num(d)!= 0 && num(e)!= 0 && mayus(f)!= 0 && mayus(g)!= 0 ){
-		cout << a << b << c << d << e << f << g << " si corresponde a un número de patente!" << endl;
+		cout << a << b << c << d << e << f << g << " si corresponde a un nÃºmero de patente!" << endl;
 	}else{
-		cout << a << b << c << d << e << f << g << " no corresponde a un número de patente." << endl;
+		cout << a << b << c << d << e << f << g << " no corresponde a un nÃºmero de patente." << endl;
 	}
 }
 
