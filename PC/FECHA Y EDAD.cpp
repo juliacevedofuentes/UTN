@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
 void SeasonPrint(int a,int b){
 	int x = b*100+a;
 	if (x >= 321 && x < 621){
-		cout << "Esta fecha pertenece al otoño." << endl;
+		cout << "Esta fecha pertenece al otoÃ±o." << endl;
 	} else if (x >= 621 && x < 921){
 		cout << "Esta fecha pertenece al invierno." << endl;
 	} else if (x >= 921 && x < 1221){
@@ -38,31 +38,31 @@ void SeasonPrint(int a,int b){
 void EdadActual(int a,int b,int c){
 	int dian,mesn,yearn;
 	int diae,mese,yeare;
-	cout << "Por favor ingrese su día, mes y año de nacimiento en ese orden: " << endl;
+	cout << "Por favor ingrese su dÃ­a, mes y aÃ±o de nacimiento en ese orden: " << endl;
 	cin >> dian >> mesn >> yearn;
 	if(dian<a){
 		if(mesn<b){
 			yeare = c - yearn;
 			mese = (mesn+12) - b - 1;
 			diae = (dian+30)-a; 
-			cout << "Edad actual: " << diae << " días, " << mese << " meses y " << yeare << " años." << endl;
+			cout << "Edad actual: " << diae << " dÃ­as, " << mese << " meses y " << yeare << " aÃ±os." << endl;
 		}else if (mesn>=b){
 			yeare = c - yearn -1;
 			mese = mesn - b - 1;
 			diae = (dian+30)-a; 
-			cout << "Edad actual: " << diae << " días, " << mese << " meses y " << yeare << " años." << endl;
+			cout << "Edad actual: " << diae << " dÃ­as, " << mese << " meses y " << yeare << " aÃ±os." << endl;
 		}
 	} else if(dian>=a){
 		if(mesn<b){
 			yeare = c - yearn;
 			mese = (mesn+12) - b;
 			diae = dian-a; 
-			cout << "Edad actual: " << diae << " días, " << mese << " meses y " << yeare << " años." << endl;
+			cout << "Edad actual: " << diae << " dÃ­as, " << mese << " meses y " << yeare << " aÃ±os." << endl;
 		}else if (mesn>=b){
 			yeare = c - yearn -1;
 			mese = mesn - b;
 			diae = dian-a; 
-			cout << "Edad actual: " << diae << " días, " << mese << " meses y " << yeare << " años." << endl;
+			cout << "Edad actual: " << diae << " dÃ­as, " << mese << " meses y " << yeare << " aÃ±os." << endl;
 		}
 	}
 	
