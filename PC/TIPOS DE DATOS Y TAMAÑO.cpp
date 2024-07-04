@@ -1,7 +1,7 @@
 #include <iostream>
 #include <typeinfo>
 using namespace std;
-//Tipo de datos y tamaño
+//Tipo de datos y tamaÃ±o
 int main(int argc, char *argv[]) {
 	bool x = true;
 	char n = 68.00;
@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
 	cout << e << endl;
 	cout << y << endl;
 	
-	cout << "Tamaño/n" << endl;
+	cout << "TamaÃ±o/n" << endl;
 	cout << sizeof(x) << endl;
 	cout << sizeof(n) << endl;
 	cout << sizeof(j) << endl;
