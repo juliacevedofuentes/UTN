@@ -24,7 +24,8 @@ int main(int argc, char *argv[]) {
 	cout << funcionA(men,may) << endl;
 	
 	return 0;
-}
+}
+
 int menor(int a,int b,int c,int d){
 	int x = a;
 	if(b<x){x = b;}
