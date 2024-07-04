@@ -9,7 +9,7 @@ int main(int argc, char *argv[]) {
 	cout << "2. Cuadrado" << endl;
 	cout << "3. Rectangulo" << endl;
 	cout << "4. Rombo" << endl;
-	cout << "Ingrese su opción:" << endl;
+	cout << "Ingrese su opciÃ³n:" << endl;
 	cin >> n;
 	cout << "Ingrese el caracter para dibujar la figura:" << endl;
 	cin >> x;
