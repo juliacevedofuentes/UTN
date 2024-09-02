@@ -1,5 +1,5 @@
 #include <iostream>
-#incl
+#include <set>
 using namespace std;
 
 #define tm 9
@@ -43,11 +43,11 @@ bool sudokuornot(int m[][tm], int c){
 	for (int i = 0; i < 9; ++i) {
 		set<int> row, col, box;
 		for (int j = 0; j < 9; ++j) {
-			if (board[i][j] != 0 && !row.insert(board[i][j]).second) return false;
-			if (board[j][i] != 0 && !col.insert(board[j][i]).second) return false;
+			if (m[i][j] != 0 && !row.insert(m[i][j]).second) return false;
+			if (m[j][i] != 0 && !col.insert(m[j][i]).second) return false;
 			int boxRow = 3 * (i / 3) + j / 3;
 			int boxCol = 3 * (i % 3) + j % 3;
-			if (board[boxRow][boxCol] != 0 && !box.insert(board[boxRow][boxCol]).second) return false;
+			if (m[boxRow][boxCol] != 0 && !box.insert(m[boxRow][boxCol]).second) return false;
 		}
 	}
 	return true;
